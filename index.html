@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:v-validate="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>VeeValidate</title>
+    <script src="vue/vue.js"></script>
+    <script src="vue/vee-validate.js"></script>
+    <style>
+       body{
+           width: 700px;
+           margin: auto;
+           margin-top:100px;
+       }
+        label{
+            display:block;
+            width:250px;
+            float: left;
+        }
+
+        input{
+            width:250px;
+        }
+    </style>
+</head>
+<body>
+<div  id="app">
+    <div>
+        <label class="label" for="matricule">Matricule</label>
+        <p :class="{ 'control': true }">
+            <input v-validate="'required|matricule'" :class="{'input': true, 'is-danger': errors.has('matricule') }"
+                   id="matricule"
+                   type="text" name="matricule" placeholder="Matricule">
+            <span v-show="errors.has('matricule')" class="help is-danger">{{ errors.first('matricule') }}</span>
+        </p>
+    </div>
+
+    <div>
+        <label class="label" for="nom">Nom:</label>
+        <p :class="{ 'control': true }">
+            <input v-validate="'required|nom'" :class="{'input': true, 'is-danger': errors.has('nom') }"
+                   id="nom"
+                   type="text" name="nom" placeholder="Nom">
+            <span v-show="errors.has('nom')" class="help is-danger">{{ errors.first('nom') }}</span>
+        </p>
+    </div>
+
+    <div>
+        <label class="label" for="prenom">Prénom:</label>
+        <p :class="{ 'control': true }">
+            <input v-validate="'required|prenom'" :class="{'input': true, 'is-danger': errors.has('prenom') }"
+                   id="prenom"
+                   type="text" name="prenom" placeholder="Prenom">
+            <span v-show="errors.has('prenom')" class="help is-danger">{{ errors.first('prenom') }}</span>
+        </p>
+    </div>
+
+    <div>
+        <label class="label" for="email">Email :</label>
+        <p :class="{ 'control': true }">
+            <input v-validate="'required|email'" :class="{'input': true, 'is-danger': errors.has('email') }" id="email"
+                   type="text" name="email" placeholder="E-mail">
+            <span v-show="errors.has('email')" class="help is-danger">{{ errors.first('email') }}</span>
+        </p>
+    </div>
+
+    <div>
+        <label class="label" for="mdp">Mot de passe :</label>
+        <p :class="{ 'control': true }">
+            <input v-validate="'required|confirmed:mdpc'" :class="{'input': true, 'is-danger': errors.has('mdp') }" id="mdp"
+                   type="password" name="mdp" placeholder="Passe">
+            <span v-show="errors.has('mdp')" class="help is-danger">{{ errors.first('mdp') }}</span>
+        </p>
+    </div>
+
+    <div>
+        <label class="label" for="mdpc">Confirmer le mot de passe :</label>
+        <p :class="{ 'control': true }">
+            <input v-validate="'required'" :class="{'input': true, 'is-danger': errors.has('mdpc') }" id="mdpc"
+                   type="password" name="mdpc" placeholder="Confirmer le mot de passe">
+            <span v-show="errors.has('mdpc')" class="help is-danger">{{ errors.first('mdpc') }}</span>
+        </p>
+    </div>
+
+</div>
+<script>
+    Vue.use(VeeValidate);
+    new Vue({
+        el: '#app'
+    });
+</script>
+</body>
+</html>
