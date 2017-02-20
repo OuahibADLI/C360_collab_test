@@ -15,21 +15,22 @@
 <div class="container" id="root">
 
     <div class="row">
-        <div class="col-lg-8 offset-2">
+        <div class="col-lg-8 col-sm-8 col-8 col-lg-8 col-xl-8 offset-2 ">
 
             <div class="card">
                 <br>
                 <div>
 
-                        <div class="row">
-                            <div class="col-md-4 offset-2 text-center inscriptionLine">
-                                <a href="#" :class="color_inscription" id="register-form-link" @click="changeColorConnexion">INSCRIPTION</a>
-                            </div>
-
-                            <div class="col-md-4 text-center connexionLine">
-                                <a href="#" :class="color_connexion" id="login-form-link" @click="changeColorInscription">CONNEXION</a>
-                            </div>
+                    <div class="row">
+                        <div class="col-md-4 col-sm-4 col-4 col-lg-4 col-xl-4 offset-2 text-center inscriptionLine">
+                            <a href="#" :class="color_inscription" id="register-form-link"
+                               @click="changeColorConnexion">INSCRIPTION</a>
                         </div>
+
+                        <div class="col-md-4 col-sm-4 col-4 col-lg-4 col-xl-4 text-center connexionLine">
+                            <a href="#" :class="color_connexion" id="login-form-link" @click="changeColorInscription">CONNEXION</a>
+                        </div>
+                    </div>
 
 
                 </div> <!-- Fin panel heading -->
@@ -37,7 +38,7 @@
 
                 <div class="card-block">
                     <div class="row">
-                        <div class="col-md-6 offset-3">
+                        <div class="col-md-6 col-sm-6 col-6 col-lg-6 col-xl-6 offset-3">
 
                             <form id="register-form" action="#" method="post" role="form" style="display: block;">
                                 <!-- MATRICULE -->
@@ -45,9 +46,13 @@
                                     <label>Code de login</label>
 
                                     <div class="inner-addon left-addon">
-                                    <i class="fa fa-barcode"></i>
-                                        <input type="text" v-model="personnalIdNumber" tabindex="1" class="form-control " placeholder="ABC1234"  @blur="validerMatricule" v-show="validation_personnalIdNumber">
-                                        <input type="text" v-model="personnalIdNumber" tabindex="1" class="form-control " style="border-color:#B22222" placeholder="ABC1234"  @blur="validerMatricule" v-show="!validation_personnalIdNumber">
+                                        <i class="fa fa-barcode"></i>
+                                        <input type="text" v-model="personnalIdNumber" tabindex="1"
+                                               class="form-control " placeholder="ABC1234" @blur="validerMatricule"
+                                               v-show="validation_personnalIdNumber">
+                                        <input type="text" v-model="personnalIdNumber" tabindex="1"
+                                               class="form-control " style="border-color:#B22222" placeholder="ABC1234"
+                                               @blur="validerMatricule" v-show="!validation_personnalIdNumber">
                                         <span class="color-red" v-show="!validation_personnalIdNumber">Numéro de matricule invalide</span>
                                     </div>
 
@@ -58,7 +63,8 @@
 
                                     <div class="inner-addon left-addon">
                                         <i class="fa fa-user"></i>
-                                    <input  type="text" name="email" id="nom" tabindex="1" class="form-control" placeholder="DUPONT" value="">
+                                        <input type="text" name="email" id="nom" tabindex="1" class="form-control"
+                                               placeholder="DUPONT" value="">
                                     </div>
 
                                 </div>
@@ -68,7 +74,8 @@
 
                                     <div class="inner-addon left-addon">
                                         <i class="fa fa-user"></i>
-                                    <input type="text" name="password" id="prenom" tabindex="2" class="form-control" placeholder="Eric">
+                                        <input type="text" name="password" id="prenom" tabindex="2" class="form-control"
+                                               placeholder="Eric">
                                     </div>
                                 </div>
                                 <!-- EMAIL -->
@@ -76,42 +83,47 @@
                                     <label>Email</label>
 
                                     <div class="inner-addon left-addon">
-                                      <i class="fa fa-envelope"></i>
-                                    <input type="email" name="confirm-password" id="email" tabindex="2" class="form-control" placeholder="eric.dupont@viseo.com">
+                                        <i class="fa fa-envelope"></i>
+                                        <input type="email" name="confirm-password" id="email" tabindex="2"
+                                               class="form-control" placeholder="eric.dupont@viseo.com">
                                     </div>
                                 </div>
                                 <!-- MOT DE PASSE -->
                                 <div class="form-group">
                                     <label>Mot de passe</label>
-                                    <div class="inner-addon left-addon right-addon">
-                                        <i class="fa fa-lock fa-left"></i>
-                                        <i class="fa fa-eye fa-right"></i>
-                                    <input type="password" name="confirm-password" id="password" tabindex="2" class="form-control" placeholder="••••••">
+                                    <div class="password">
+                                        <i class="fa fa-lock"></i>
+                                        <span class="fa fa-eye" >
+
+
+                                        </span>
+                                        <input type="password" name="confirm-password" id="password" tabindex="2"
+                                               class="form-control" placeholder="••••••">
 
                                     </div>
                                 </div>
                                 <!-- CONFIRMATION MOT DE PASSE -->
                                 <div class="form-group">
                                     <label>Confirmation mot de passe</label>
-                                    <div class="inner-addon left-addon right-addon">
-                                        <i class="fa fa-lock fa-left"></i>
-                                        <span>
+                                    <div class="password">
+                                       <i class="fa fa-lock"></i>
+                                        <span class="fa fa-eye" >
 
-                                        <i class="fa fa-eye fa-right" onclick="alert('test');"></i>
 
                                         </span>
-                                    <input type="password" name="confirm-password" id="confirm-password" tabindex="2" class="form-control" placeholder="••••••">
+                                        <input type="password" name="confirm-password" id="confirm-password"
+                                               tabindex="2" class="form-control" placeholder="••••••">
                                     </div>
 
 
                                 </div>
 
 
-
                                 <div class="form-group">
                                     <div class="row">
-                                        <div class="col-md-6 offset-3">
-                                            <input type="submit" name="register-submit" id="register-submit" tabindex="4" class="form-control btn btn-primary" value="S'inscrire">
+                                        <div class="col-md-6 col-sm-6 col-6 col-lg-6 col-xl-6 offset-3">
+                                            <input type="submit" name="register-submit" id="register-submit"
+                                                   tabindex="4" class="form-control btn btn-primary" value="S'inscrire">
                                         </div>
                                     </div>
                                 </div>
@@ -125,34 +137,34 @@
 </div>
 <script>
     new Vue({
-        el:'#root',
-        data:{
-            border:'color-red',
-            personnalIdNumber:'',
-            validation_personnalIdNumber:true,
+        el: '#root',
+        data: {
+            border: 'color-red',
+            personnalIdNumber: '',
+            validation_personnalIdNumber: true,
             color_inscription: 'color-blue',
-            color_connexion:'color-blue'
+            color_connexion: 'color-blue'
         },
-        methods:{
+        methods: {
             validerMatricule(){
-                if(this.personnalIdNumber == '123'){
+                if (this.personnalIdNumber == '123') {
                     this.validation_personnalIdNumber = true;
-                }else{
+                } else {
                     this.validation_personnalIdNumber = false;
                 }
             },
             changeColorConnexion(){
-                if(this.color_connexion == 'color-blue' && this.color_inscription == 'color-blue'){
+                if (this.color_connexion == 'color-blue' && this.color_inscription == 'color-blue') {
                     this.color_connexion = 'color-grey';
-                }else if(this.color_connexion == 'color-blue' && this.color_inscription == 'color-grey'){
+                } else if (this.color_connexion == 'color-blue' && this.color_inscription == 'color-grey') {
                     this.color_connexion = 'color-grey';
                     this.color_inscription = 'color-blue';
                 }
             },
             changeColorInscription(){
-                if(this.color_inscription == 'color-blue' && this.color_connexion == 'color-blue'){
+                if (this.color_inscription == 'color-blue' && this.color_connexion == 'color-blue') {
                     this.color_inscription = 'color-grey';
-                }else if(this.color_inscription == 'color-blue' && this.color_connexion == 'color-grey'){
+                } else if (this.color_inscription == 'color-blue' && this.color_connexion == 'color-grey') {
                     this.color_inscription = 'color-grey';
                     this.color_connexion = 'color-blue';
                 }
