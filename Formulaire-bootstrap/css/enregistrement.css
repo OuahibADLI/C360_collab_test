@@ -19,44 +19,22 @@
 .right-addon input { padding-right: 30px; }
 
 .card {
-    margin-top: 20%;
+    margin-top: 15%;
 
 }
 
 .color-blue {color: #1E90FF;}
 .color-grey {color: #A9A9A9;}
 .color-red {color: #B22222;}
+
 .inscriptionLine {
     border-right: thin hidden #D3D3D3;
     border-bottom: thin solid #D3D3D3;
-    font-size:150%;
+    font-size:110%;
 }
+
 .connexionLine {
-    border-left: thin solid #D3D3D3;
+    border-left: thin solid #D3D3D3 ;
     border-bottom: thin solid #D3D3D3;
-    font-size:150%;
-}
-
-.password{
-    position: relative;
-}
-
-.password .fa-eye,#password2 .fa-eye {
-
-    right: 10px;
-    position: absolute;
-    top: 12px;
-    cursor:pointer;
-}
-.password .fa-lock,#password2 .fa-lock {
-
-    left: 10px;
-    position: absolute;
-    top: 12px;
-    cursor:pointer;
-    pointer-events: none;
-}
-.password input[type="password"]{
-    padding-right: 30px;
-    padding-left: 30px;
+    font-size:110%;
 }
