@@ -10,6 +10,7 @@
 
     var prenom = function (value) { return /^[a-zA-ZÀÁÂÃÄÅàáâãäåÒÓÔÕÖØòóôõöøÈÉÊËèéêëÇçÌÍÎÏìíîïÙÚÛÜùúûüÿÑñ.' '-/']{2,125}$/.test(value); };
 
+    var mdp = function (value) { return /^[a-zA-Z0-9-ÀÁÂÃÄÅàáâãäåÒÓÔÕÖØòóôõöøÈÉÊËèéêëÇçÌÍÎÏìíîïÙÚÛÜùúûüÿÑñ.' '-/']{6,125}$/.test(value); };
 
     var alpha = function (value) { return /^[a-zA-Z]*$/.test(value); };
 
@@ -764,6 +765,7 @@
         matricule: matricule,
         nom: nom,
         prenom: prenom,
+        mdp: mdp,
         alpha_dash: alpha_dash,
         alpha_num: alpha_num,
         alpha_spaces: alpha_spaces,
@@ -1270,7 +1272,7 @@
         matricule: function () { return ("Veuillez entrer  code de login valide."); },
         nom: function () { return ("Veuillez entrer un nom valide."); },
         prenom: function () { return ("Veuillez entrer un pénom valide."); },
-
+        mdp:function () { return ("Le mot de passe doit avoir au minimum 6 caractères."); },
         alpha_dash: function (field) { return ("The " + field + " field may contain alpha-numeric characters as well as dashes and underscores."); },
         alpha_num: function (field) { return ("The " + field + " field may only contain alpha-numeric characters."); },
         alpha_spaces: function (field) { return ("The " + field + " field may only contain alphabetic characters as well as spaces."); },
@@ -1281,7 +1283,7 @@
 
             return ("The " + field + " field must be between " + min + " and " + max + ".");
         },
-        confirmed: function (field) { return ("The " + field + " confirmation does not match."); },
+        confirmed: function () { return ("La confirmation du mot de passe n'est pas valide."); },
         credit_card: function (field) { return ("The " + field + " field is invalid."); },
         decimal: function (field, ref) {
             if ( ref === void 0 ) ref = ['*'];
