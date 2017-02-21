@@ -30,15 +30,11 @@
     border-right: thin hidden #D3D3D3;
     border-bottom: thin solid #D3D3D3;
     font-size:150%;
-
 }
 .connexionLine {
-
     border-left: thin solid #D3D3D3;
     border-bottom: thin solid #D3D3D3;
     font-size:150%;
-
-
 }
 
 .password{
@@ -46,13 +42,6 @@
 }
 
 .password .fa-eye,#password2 .fa-eye {
-
-    right: 10px;
-    position: absolute;
-    top: 12px;
-    cursor:pointer;
-}
-.password .fa-eye-slash,#password2 .fa-eye-slash {
 
     right: 10px;
     position: absolute;
@@ -71,8 +60,3 @@
     padding-right: 30px;
     padding-left: 30px;
 }
-.password input[type="text"]{
-    padding-right: 30px;
-    padding-left: 30px;
-}
-

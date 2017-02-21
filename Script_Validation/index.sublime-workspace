@@ -1,0 +1,565 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"fi",
+				"firstName"
+			],
+			[
+				"la",
+				"LastName"
+			],
+			[
+				"index",
+				"indexOfJump"
+			],
+			[
+				"str",
+				"string2"
+			],
+			[
+				"strin",
+				"string1"
+			],
+			[
+				"dog",
+				"dogWeigth2"
+			],
+			[
+				"squa",
+				"squareSide2"
+			],
+			[
+				"fun",
+				"function"
+			],
+			[
+				"s",
+				"sum2"
+			],
+			[
+				"isOld",
+				"isOldMan"
+			],
+			[
+				"a",
+				"age"
+			],
+			[
+				"class",
+				"class\tkeyword"
+			],
+			[
+				"import",
+				"import\tkeyword"
+			],
+			[
+				"impor",
+				"import\tkeyword"
+			],
+			[
+				"impo",
+				"import\tkeyword"
+			],
+			[
+				"app",
+				"AppModule\talias"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "/C/Users/vle3595/Desktop/C360_collab_test/Script_adaptation/adaptation back-end.js",
+			"settings":
+			{
+				"buffer_size": 2630,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/C/Users/vle3595/Desktop/C360_collab_test/Formulaire/form.html",
+			"settings":
+			{
+				"buffer_size": 9415,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/C/Users/vle3595/Desktop/GitHubLog.txt",
+			"settings":
+			{
+				"buffer_size": 152157,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/C/Users/vle3595/Desktop/C360_collab_test/ierlohbx.abb.txt",
+			"settings":
+			{
+				"buffer_size": 913,
+				"encoding": "UTF-8 with BOM",
+				"line_ending": "Windows"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 325.0,
+		"last_filter": "ht",
+		"selected_items":
+		[
+			[
+				"ht",
+				"Set Syntax: HTML"
+			],
+			[
+				"",
+				"Package Control: Enable Package"
+			],
+			[
+				"ins",
+				"Indentation: Convert to Spaces"
+			],
+			[
+				"install pac",
+				"Package Control: Install Package"
+			],
+			[
+				"enable",
+				"Package Control: Enable Package"
+			],
+			[
+				"package control: ",
+				"Package Control: Install Package"
+			],
+			[
+				"setsyntax javasc",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"html",
+				"Set Syntax: HTML"
+			],
+			[
+				"javasc",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"Package Control: install ",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 502.0
+	},
+	"console":
+	{
+		"height": 62.0,
+		"history":
+		[
+			"exit",
+			"cd ..",
+			"cd",
+			"ls",
+			"dir"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/C/Users/vle3595/Desktop/C360_collab_test/test.txt!",
+		"/C/Users/vle3595/Desktop/C360_collab_test/Formulaire/js/vee-validate.js",
+		"/C/Users/vle3595/Desktop/C360_collab_test/Script_Validation/index.html",
+		"/C/Users/vle3595/Desktop/C360_collab_test/Formulaire/form.html",
+		"/C/Users/vle3595/Desktop/C360_collab_test/test.txt",
+		"/C/Users/vle3595/PrivatLesnyakViktor/training/vue.js/index.html",
+		"/C/Users/vle3595/PrivatLesnyakViktor/training/vue.js/vee-validate.js",
+		"/C/Users/vle3595/Desktop/test.txt",
+		"/C/Users/vle3595/PrivatLesnyakViktor/training/vue.js/index.vue",
+		"/C/Users/vle3595/Desktop/vue.js/index.vue",
+		"/C/Users/vle3595/PrivatLesnyakViktor/training/javascript/index.html",
+		"/C/Users/vle3595/Desktop/desktop.ini",
+		"/C/Users/vle3595/PrivatLesnyakViktor/training/javascript/script.js",
+		"/C/Users/vle3595/PrivatLesnyakViktor/mdp wifi",
+		"/C/Users/vle3595/AppData/Local/Temp/Temp1_bootstrap-4.0.0-alpha.6-dist.zip/bootstrap-4.0.0-alpha.6-dist/js/bootstrap.js",
+		"/C/Users/vle3595/Desktop/App.vue",
+		"/C/Users/vle3595/PrivatLesnyakViktor/training/javascript/test.js",
+		"/C/Users/vle3595/AppData/Roaming/Sublime Text 3/Packages/User/TypeScriptReact.sublime-settings",
+		"/C/Users/vle3595/AppData/Roaming/Sublime Text 3/Packages/JavaScript Completions/javascript_completions/JavaScript-Completions.sublime-settings",
+		"/C/Users/vle3595/Desktop/lesNotesProjets.txt",
+		"/C/Users/vle3595/Desktop/C360/testVue/npm-debug.log",
+		"/C/Users/vle3595/Desktop/C360/testVue/node_modules/webpack-dev-server/lib/Server.js",
+		"/C/Users/vle3595/Desktop/Home.vue",
+		"/C/Users/vle3595/Desktop/C360/testVue/node_modules/vue/src/index.js",
+		"/C/Users/vle3595/Programmes/node_modules/vue/package.json",
+		"/C/Users/vle3595/.IntelliJIdea2016.3/system/tomcat/Unnamed_C360_formation_2/logs/catalina.2017-02-09.log",
+		"/C/Users/vle3595/Desktop/C360/C360_formation/pom.xml",
+		"/C/Users/vle3595/.IntelliJIdea2016.3/system/tomcat/Unnamed_C360_formation_2/logs/localhost_access_log.2017-02-09.txt",
+		"/C/Users/vle3595/Downloads/vue.js",
+		"/C/Users/vle3595/.IntelliJIdea2016.3/system/Maven/Projects/6fe60a46/tree.dat",
+		"/C/Users/vle3595/.IntelliJIdea2016.3/system/tomcat/Unnamed_C360_formation_2/logs/manager.2017-02-09.log",
+		"/C/Users/vle3595/.IntelliJIdea2016.3/system/tomcat/Unnamed_C360_formation_2/logs/host-manager.2017-02-09.log",
+		"/C/Users/vle3595/.IntelliJIdea2016.3/system/tomcat/Unnamed_C360_formation_2/logs/localhost.2017-02-09.log",
+		"/C/Users/vle3595/.IntelliJIdea2016.3/system/tomcat/Unnamed_C360_formation/logs/localhost_access_log.2017-02-09.txt",
+		"/C/Users/vle3595/.IntelliJIdea2016.3/system/tomcat/Unnamed_C360_formation/logs/catalina.2017-02-09.log",
+		"/C/Users/vle3595/.IntelliJIdea2016.3/system/tomcat/Unnamed_C360_formation/logs/manager.2017-02-09.log",
+		"/C/Users/vle3595/.IntelliJIdea2016.3/system/tomcat/Unnamed_C360_formation/logs/localhost.2017-02-09.log",
+		"/C/Users/vle3595/.IntelliJIdea2016.3/system/tomcat/Unnamed_C360_formation/logs/host-manager.2017-02-09.log",
+		"/C/Users/vle3595/Desktop/C360/C360_formation/karma.conf.js",
+		"/C/Users/vle3595/Programmes/apache-tomee-7.0.2-plume/apache-tomee-plume-7.0.2/temp/ejb-jar-1684067000344147067.xml",
+		"/C/Users/vle3595/Programmes/apache-tomee-7.0.2-plume/apache-tomee-plume-7.0.2/webapps/host-manager/manager.xml",
+		"/C/Users/vle3595/Programmes/apache-tomee-7.0.2-plume/apache-tomee-plume-7.0.2/webapps/host-manager/WEB-INF/web.xml",
+		"/C/Users/vle3595/Desktop/C360/C360_formation/test.txt",
+		"/C/Users/vle3595/PrivatLesnyakViktor/config_postgreSQL.txt",
+		"/C/Users/vle3595/Programmes/apache-tomcat-8.5.9-windows-x64/apache-tomcat-8.5.9/conf/tomcat-users.xml",
+		"/C/Users/vle3595/Programmes/apache-tomcat-8.5.9-windows-x64/apache-tomcat-8.5.9/webapps/docs/WEB-INF/web.xml",
+		"/C/Users/vle3595/Programmes/apache-tomee-7.0.2-plume/apache-tomee-plume-7.0.2/RUNNING.txt",
+		"/C/Users/vle3595/Programmes/test/src/main.js",
+		"/C/Users/vle3595/Programmes/coordoné Henri Darmont",
+		"/C/Users/vle3595/Desktop/C360/C360_formation/.gitignore",
+		"/C/Users/vle3595/Desktop/C360/credits.txt",
+		"/C/Users/vle3595/Programmes/postgreSQL/data/postgresql.conf",
+		"/C/Users/vle3595/Programmes/postgreSQL/license.txt",
+		"/C/Users/vle3595/Programmes/data/base/1/112",
+		"/C/Users/vle3595/Desktop/test.html",
+		"/C/Users/vle3595/Programmes/test/index.html",
+		"/C/Users/vle3595/Programmes/test/test/unit/index.js",
+		"/C/Users/vle3595/Downloads/sample_resources.xml",
+		"/C/glassFish4/glassfish-4.1.1-web/glassfish4/bin/bonecp-datasource.xml",
+		"/C/workspace/Pro/WebContent/WEB-INF/web.xml",
+		"/C/Users/vle3595/.gitconfig",
+		"/C/Users/vle3595/PrivatLesnyakViktor/Artem/angular2-quickstart/package.json",
+		"/C/Users/vle3595/PrivatLesnyakViktor/Artem/angular2-quickstart/tsconfig.json",
+		"/C/Users/vle3595/PrivatLesnyakViktor/Artem/angular2-quickstart/app/app.component.ts",
+		"/C/Users/vle3595/PrivatLesnyakViktor/Artem/angular2-quickstart/index.html",
+		"/C/Users/vle3595/PrivatLesnyakViktor/Artem/angular2-quickstart/app/boot.ts",
+		"/C/Users/vle3595/Desktop/C360/C360_formation-master/C360_formation-master/pom.xml",
+		"/C/Users/vle3595/PrivatLesnyakViktor/Artem/angular2-quickstart/app/boot.js.map",
+		"/C/Users/vle3595/PrivatLesnyakViktor/config_MySQL",
+		"/C/Program Files/MySQL/MySQL Server 5.7/README",
+		"/C/Users/vle3595/PrivatLesnyakViktor/Artem/angular2-quickstart/app/app.componentbis.ts",
+		"/C/Users/vle3595/PrivatLesnyakViktor/Artem/angular2-quickstart/app/app.componentbis.js",
+		"/C/Users/vle3595/PrivatLesnyakViktor/Artem/testAngular2/src/app/app.component.html",
+		"/C/Users/vle3595/PrivatLesnyakViktor/Artem/testAngular2/main.ts",
+		"/C/Users/vle3595/PrivatLesnyakViktor/Artem/testAngular2/src/app/app.component.ts",
+		"/C/Users/vle3595/PrivatLesnyakViktor/Artem/testAngular2/package.json",
+		"/C/Users/vle3595/PrivatLesnyakViktor/Artem/testAngular2/app/boot.ts",
+		"/C/Users/vle3595/PrivatLesnyakViktor/Artem/testAngular2/app/boot.js",
+		"/C/Users/vle3595/PrivatLesnyakViktor/Artem/test/app/app.component.js.map",
+		"/C/Users/vle3595/PrivatLesnyakViktor/Artem/test/index.html",
+		"/C/Users/vle3595/PrivatLesnyakViktor/Artem/test/app/boot.ts",
+		"/C/Users/vle3595/PrivatLesnyakViktor/Artem/test/package.json",
+		"/C/Users/vle3595/PrivatLesnyakViktor/Artem/test/app/boot.js",
+		"/C/Users/vle3595/PrivatLesnyakViktor/Artem/test/app/app.component.ts",
+		"/C/Users/vle3595/PrivatLesnyakViktor/Artem/test/npm-debug.log",
+		"/C/Users/vle3595/PrivatLesnyakViktor/Artem/test/tsconfig.json",
+		"/C/Users/vle3595/PrivatLesnyakViktor/Artem/test/app/app.component.js",
+		"/C/Users/vle3595/PrivatLesnyakViktor/Artem/test/license.md",
+		"/C/Users/vle3595/PrivatLesnyakViktor/Artem/Projet/src/app/app.hero.service.ts",
+		"/C/Users/vle3595/PrivatLesnyakViktor/Artem/Projet/src/app/app.hero-detail.component.html",
+		"/C/Users/vle3595/PrivatLesnyakViktor/Artem/Projet/src/app/app.logger.service.ts",
+		"/C/Users/vle3595/PrivatLesnyakViktor/Artem/Projet/src/app/app.hero-list.component.html",
+		"/C/Users/vle3595/PrivatLesnyakViktor/Artem/Projet/src/main.ts",
+		"/C/Users/vle3595/PrivatLesnyakViktor/Artem/Projet/src/app/app.module.ts",
+		"/C/Users/vle3595/PrivatLesnyakViktor/Artem/Projet/src/index.html",
+		"/C/Users/vle3595/PrivatLesnyakViktor/Artem/Projet/src/app/app.hero-list.component.ts",
+		"/C/Users/vle3595/PrivatLesnyakViktor/Artem/Projet/src/app/app.main.ts",
+		"/C/Users/vle3595/PrivatLesnyakViktor/Artem/Project/app/main.ts",
+		"/C/Users/vle3595/PrivatLesnyakViktor/Artem/Project/app/app.module.ts",
+		"/C/Users/vle3595/PrivatLesnyakViktor/Artem/Project/app/hero-list.component.ts",
+		"/C/Users/vle3595/PrivatLesnyakViktor/Artem/Project/src/app/main.ts",
+		"/C/Users/vle3595/PrivatLesnyakViktor/Artem/SiteEpicerieArmenienne/app/main.ts",
+		"/C/Users/vle3595/PrivatLesnyakViktor/Artem/SiteEpicerieArmenienne/app/app.component.ts",
+		"/C/Users/vle3595/PrivatLesnyakViktor/Artem/SiteEpicerieArmenienne/app/product-detail.component.html",
+		"/C/Users/vle3595/PrivatLesnyakViktor/Artem/SiteEpicerieArmenienne/app/product-list.component.ts",
+		"/C/Users/vle3595/PrivatLesnyakViktor/Artem/quickstart-master/quickstart-master/app/app.module.ts",
+		"/C/Users/vle3595/PrivatLesnyakViktor/Artem/SiteEpicerieArmenienne/app/product-list.component.html",
+		"/C/Users/vle3595/PrivatLesnyakViktor/Artem/SiteEpicerieArmenienne/app/app.modules.ts",
+		"/C/Users/vle3595/PrivatLesnyakViktor/Artem/SiteEpicerieArmenienne/app/product-detail.component.ts",
+		"/C/Users/vle3595/PrivatLesnyakViktor/Artem/quickstart-master/quickstart-master/app/app.component.ts",
+		"/C/Users/vle3595/AppData/Roaming/Sublime Text 3/Packages/TypeScript/Preferences.sublime-settings",
+		"/C/Users/vle3595/PrivatLesnyakViktor/Artem/index.html",
+		"/C/Users/vle3595/PrivatLesnyakViktor/Artem/spa.html",
+		"/C/Users/vle3595/PrivatLesnyakViktor/Artem/test.html",
+		"/C/Users/vle3595/Programmes/eclipse-jee-neon-2-win32/format.xml",
+		"/C/Users/vle3595/Programmes/apache-tomcat-9.0.0.M15-windows-x64/apache-tomcat-9.0.0.M15/RUNNING.txt",
+		"/C/Users/vle3595/PrivatLesnyakViktor/pwd.txt",
+		"/C/Users/vle3595/Desktop/test",
+		"/C/Users/vle3595/Programmes/nodeJS/npm-debug.log",
+		"/C/Users/vle3595/Programmes/eclipse-jee-neon-2-win32/format.xml.txt",
+		"/C/Users/vle3595/Programmes/eclipse-jee-neon-2/eclipse/eclipse.ini",
+		"/C/Users/vle3595/Programmes/eclipse-jee-mars-R-win32-x86_64/eclipse/artifacts.xml"
+	],
+	"find":
+	{
+		"height": 43.0
+	},
+	"find_in_files":
+	{
+		"height": 117.0,
+		"where_history":
+		[
+			"C:\\Users\\vle3595\\PrivatLesnyakViktor\\Artem\\testAngular2",
+			"C:\\Users\\vle3595\\PrivatLesnyakViktor\\Artem\\testAngular2\\src"
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"min ",
+			"min",
+			"required",
+			"alpha_dash",
+			"alpha",
+			"email",
+			"javascr",
+			"ello ja",
+			"webpack",
+			"gi",
+			"jndi",
+			"jdbc",
+			"datasource",
+			"connectionpool",
+			"boot.ts"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 3,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "/C/Users/vle3595/Desktop/C360_collab_test/Script_adaptation/adaptation back-end.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2630,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								2630
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "/C/Users/vle3595/Desktop/C360_collab_test/Formulaire/form.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 9415,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								4729,
+								4729
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1515.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "/C/Users/vle3595/Desktop/GitHubLog.txt",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 152157,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage",
+							"tab_size": 3,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "/C/Users/vle3595/Desktop/C360_collab_test/ierlohbx.abb.txt",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 913,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 40.0
+	},
+	"input":
+	{
+		"height": 38.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "index.sublime-project",
+	"replace":
+	{
+		"height": 80.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 286.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
