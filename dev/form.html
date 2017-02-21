@@ -17,19 +17,19 @@
                 <br>
                 <div>
                     <div class="row">
-                        <div class="col-md-4 col-sm-4 col-4 col-lg-4 col-xl-4 offset-2 text-center inscriptionLine">
+                        <div class="col-xs-12 col-xm-12 col-md-12 col-lg-4 col-xl-4 offset-lg-2 offset-xl-2 text-center inscriptionLine  ">
                             <a href="#" :class="" id="register-form-link"
                                @click="">INSCRIPTION</a>
                         </div>
-                        <div class="col-md-4 col-sm-4 col-4 col-lg-4 col-xl-4 text-center connexionLine">
+                        <div class="col-xs-12 col-xm-12 col-md-12 col-lg-4 col-xl-4 text-center connexionLine ">
                             <a href="#" :class="color_connexion" id="login-form-link" @click="changeColorInscription">CONNEXION</a>
                         </div>
                     </div>
                 </div> <!-- Fin panel heading -->
                 <div class="card-block">
                     <div class="row">
-                        <div class="col-md-6 col-sm-6 col-6 col-lg-6 col-xl-6 offset-3">
-                            <form id="register-form" action="#" method="post" role="form" style="display: block;">
+                        <div class="col-xs-12 col-xm-12 col-md-6 cold-lg-6 col-xl-6 offset-xl-3 offset-lg-3 offset-md-3">
+                            <form id="register-form" action="index.html" method="post" role="form" style="display: block;">
                                 <!-- MATRICULE-->
                                 <diV id="app">
                                     <div class="form-group" :class="{'input': true,'has-danger': errors.has('matricule')}">
@@ -75,8 +75,10 @@
                                         <label for="mdp">Mot de passe</label>
                                         <div class="password" :class="{ 'control': true }">
                                             <i class="fa fa-lock"></i>
-                                            <span class="fa fa-eye"></span>
-                                            <input type="password" v-validate="'required|mdp'" name="mdp" id="mdp" tabindex="2" class="form-control" placeholder="••••••">
+                                            <span @click="showPass = !showPass" v-show="!showPass && mdp" class="fa fa-eye" > </span>
+                                            <span @click="showPass = false" v-show="showPass && mdp" class="fa fa-eye-slash" > </span>
+                                            <input type="password" v-model="mdp" v-show="!showPass" v-validate="'required|mdp'" name="mdp" id="mdp" tabindex="2" class="form-control" placeholder="••••••">
+                                            <input type="text" v-model="mdp" v-show="showPass"v-validate="'required|mdp'" name="mdp" id="mdp" tabindex="2" class="form-control" placeholder="••••••">
                                             <span v-show="errors.has('mdp')" class="color-red">{{ errors.first('mdp') }}</span>
                                         </div>
                                     </div>
@@ -85,14 +87,17 @@
                                         <label for="mdpc">Confirmation mot de passe</label>
                                         <div class="password" :class="{ 'control': true }">
                                             <i class="fa fa-lock"></i>
-                                            <span class="fa fa-eye"></span>
-                                            <input type="password" v-validate="'required|confirmed:mdp'" name="mdpc" id="mdpc" tabindex="2" class="form-control" placeholder="••••••">
+                                            <span @click="showPassConf = !showPassConf" v-show="!showPassConf && mdpc" class="fa fa-eye" > </span>
+                                            <span @click="showPassConf = false" v-show="showPassConf && mdpc" class="fa fa-eye-slash" > </span>
+                                                <input type="password"  v-model="mdpc" v-validate="'required|confirmed:mdp'" v-show="!showPassConf" name="mdpc" id="mdpc" tabindex="2" class="form-control" placeholder="••••••">
+                                            <input type="text"  v-model="mdpc" v-validate="'required|confirmed:mdp'" v-show="showPassConf" name="mdpc" id="mdpc" tabindex="2" class="form-control" >
+
                                             <span v-show="errors.has('mdpc')" class="color-red">{{ errors.first('mdpc') }}</span>
                                         </div>
                                     </div>
                                     <div class="form-group">
                                         <div class="row">
-                                            <div class="col-md-6 col-sm-6 col-6 col-lg-6 col-xl-6 offset-3">
+                                            <div class="col-xs-12 col-xm-12 col-md-6 cold-lg-6 col-xl-6 offset-xl-3 offset-lg-3 offset-md-3">
                                                 <input type="submit" name="register-submit" id="register-submit" tabindex="4" class="form-control btn btn-primary"
                                                        value="S'inscrire">
                                             </div>
@@ -110,7 +115,15 @@
 <script>
     Vue.use(VeeValidate);
     new Vue({
-        el: '#app'
+        el: '#app',
+        data: {
+
+            showPassConf: false,
+            showPass: false,
+            mdpc: '',
+            mdp: ''
+
+        }
     });
 </script>
 <!--
