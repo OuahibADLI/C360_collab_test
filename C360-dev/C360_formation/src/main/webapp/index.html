@@ -57,7 +57,7 @@
                                         <label for="prenom">Prénom</label>
                                         <div class="inner-addon left-addon" :class="{ 'control': true }">
                                             <i class="fa fa-user"></i>
-                                            <input type="text" v-validate="'required|prenom'" name="prenom" id="prenom" tabindex="2" class="form-control" placeholder="Eric" v-model="prenom">
+                                            <input type="text" v-validate="'required|prenom'" name="prenom" id="prenom" tabindex="2" class="form-control" placeholder="Eric" v-model="collaborator.prenom">
                                             <span v-show="errors.has('prenom')" class="color-red ">{{ errors.first('prenom') }}</span>
                                         </div>
                                     </div>

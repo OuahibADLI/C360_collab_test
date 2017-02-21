@@ -14,7 +14,6 @@ new Vue({
             password:'',
             confirmPassword:''
         },
-        prenom:'',
         collaboratorToRegister:{}, // on le définit dans la fonction verifyFrom()
         isNewPersonalIdNumber:true,
         isNewEmail:true,
