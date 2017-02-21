@@ -6,8 +6,9 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/enregistrement.css">
-    <script src="./js/vue.js"></script>
-    <script src="./js/vee-validate.js"></script>
+    <script src="js/lib/vue.js"></script>
+    <script src="js/lib/vee-validate.js"></script>
+    <script src="js/app.js"></script>
 </head>
 <body>
 <div class="container">
@@ -107,12 +108,17 @@
         </div>
     </div>
 </div>
+
 <script>
-    Vue.use(VeeValidate);
-    new Vue({
-        el: '#app'
-    });
+    import app from 'js/app.js'
+
+    export default{
+        components : {
+            app
+        }
+    }
 </script>
+
 <!--
 <script>
     new Vue({
