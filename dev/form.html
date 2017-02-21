@@ -29,67 +29,64 @@
                 <div class="card-block">
                     <div class="row">
                         <div class="col-md-6 col-sm-6 col-6 col-lg-6 col-xl-6 offset-3">
-                            <form id="register-form" action="#" method="post" role="form" style="display: block;" >
+                            <form id="register-form" action="#" method="post" role="form" style="display: block;">
                                 <!-- MATRICULE-->
-                                <diV  id="app">
-                                    <div class="form-group">
+                                <diV id="app">
+                                    <div class="form-group" :class="{'input': true,'has-danger': errors.has('matricule')}">
                                         <label for="matricule">Code de login</label>
-                                        <div class="inner-addon left-addon" :class="{ 'control': true }">
+                                        <div class="inner-addon left-addon">
                                             <i class="fa fa-barcode"></i>
-                                            <input type="text" v-validate="'required|matricule'"  :class="{'input': true, 'is-danger': errors.has('matricule') }" id="matricule" name="matricule" tabindex="1" class="form-control "  placeholder="ABC1234">
-                                            <span v-show="errors.has('matricule')" class="color-red">{{ errors.first('matricule') }}</span>
-
+                                            <input type="text" v-validate="'required|matricule'" id="matricule" name="matricule" tabindex="1" class="form-control "
+                                                   placeholder="ABC1234">
+                                            <p class="text-danger" v-if="errors.has('matricule')">{{errors.first('matricule') }}</p>
                                         </div>
                                     </div>
-                                    <!-- NOM-->
-                                    <div class="form-group">
+                                    <!-- NOM -->
+                                    <div class="form-group" :class="{'input': true,'has-danger': errors.has('nom')}">
                                         <label for="nom">Nom</label>
                                         <div class="inner-addon left-addon" :class="{ 'control': true }">
                                             <i class="fa fa-user"></i>
-                                            <input type="text" v-validate="'required|nom'" name="nom" id="nom" :class="{'input': true,'has-danger': errors.has('nom') }"
-                                                   tabindex="1" class="form-control " placeholder="DUPONT"/>
+                                            <input type="text" v-validate="'required|nom'" name="nom" id="nom" tabindex="1" class="form-control " placeholder="DUPONT"/>
                                             <span v-show="errors.has('nom')" class="color-red ">{{ errors.first('nom') }}</span>
                                         </div>
                                     </div>
                                     <!-- PRENOM -->
-                                    <div class="form-group">
+                                    <div class="form-group" :class="{'input': true,'has-danger': errors.has('prenom') }">
                                         <label for="prenom">Prénom</label>
                                         <div class="inner-addon left-addon" :class="{ 'control': true }">
                                             <i class="fa fa-user"></i>
-                                            <input type="text" v-validate="'required|prenom'" :class="{'input': true,'has-danger': errors.has('prenom') }"
-                                                   name="prenom" id="prenom" tabindex="2" class="form-control" placeholder="Eric">
+                                            <input type="text" v-validate="'required|prenom'" name="prenom" id="prenom" tabindex="2" class="form-control"
+                                                   placeholder="Eric">
                                             <span v-show="errors.has('prenom')" class="color-red ">{{ errors.first('prenom') }}</span>
                                         </div>
                                     </div>
                                     <!-- EMAIL -->
-                                    <div class="form-group">
+                                    <div class="form-group" :class="{'input': true,'has-danger': errors.has('email') }">
                                         <label for="email">Email</label>
                                         <div class="inner-addon left-addon" :class="{ 'control': true }">
                                             <i class="fa fa-envelope"></i>
-                                            <input type="email" v-validate="'required|email'" :class="{'input': true,'has-danger': errors.has('email') }"
-                                                   name="email" id="email" tabindex="2" class="form-control" placeholder="eric.dupont@viseo.com">
+                                            <input type="email" v-validate="'required|email'" name="email" id="email" tabindex="2" class="form-control"
+                                                   placeholder="eric.dupont@viseo.com">
                                             <span v-show="errors.has('email')" class="color-red ">{{ errors.first('email') }}</span>
                                         </div>
                                     </div>
                                     <!-- MOT DE PASSE -->
-                                    <div class="form-group">
+                                    <div class="form-group" :class="{'input': true, 'has-danger': errors.has('mdp') }">
                                         <label for="mdp">Mot de passe</label>
                                         <div class="password" :class="{ 'control': true }">
                                             <i class="fa fa-lock"></i>
                                             <span class="fa fa-eye"></span>
-                                            <input type="password" v-validate="'required|confirmed:mdpc'" :class="{'input': true, 'is-danger': errors.has('mdp') }" name="mdp"
-                                                   id="mdp" tabindex="2" class="form-control" placeholder="••••••">
+                                            <input type="password" v-validate="'required|mdp'" name="mdp" id="mdp" tabindex="2" class="form-control" placeholder="••••••">
                                             <span v-show="errors.has('mdp')" class="color-red">{{ errors.first('mdp') }}</span>
                                         </div>
                                     </div>
                                     <!-- CONFIRMATION MOT DE PASSE -->
-                                    <div class="form-group">
+                                    <div class="form-group" :class="{'input': true, 'has-danger': errors.has('mdpc') }">
                                         <label for="mdpc">Confirmation mot de passe</label>
                                         <div class="password" :class="{ 'control': true }">
                                             <i class="fa fa-lock"></i>
                                             <span class="fa fa-eye"></span>
-                                            <input type="password" v-validate="'required'" :class="{'input': true, 'is-danger': errors.has('mdpc') }" name="mdpc" id="mdpc"
-                                                   tabindex="2" class="form-control" placeholder="••••••">
+                                            <input type="password" v-validate="'required|confirmed:mdp'" name="mdpc" id="mdpc" tabindex="2" class="form-control" placeholder="••••••">
                                             <span v-show="errors.has('mdpc')" class="color-red">{{ errors.first('mdpc') }}</span>
                                         </div>
                                     </div>
@@ -114,7 +111,6 @@
     Vue.use(VeeValidate);
     new Vue({
         el: '#app'
-
     });
 </script>
 <!--
