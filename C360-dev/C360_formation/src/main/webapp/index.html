@@ -30,7 +30,7 @@
                 <div class="card-block">
                     <div class="row">
                         <div class="col-md-6 col-sm-6 col-6 col-lg-6 col-xl-6 offset-3">
-                            <form id="register-form" action="#" method="post" role="form" style="display: block;">
+                            <form id="register-form" @submit.prevent="verifyForm">
                                 <!-- MATRICULE-->
                                 <diV>
                                     <div class="form-group" :class="{'input': true,'has-danger': errors.has('matricule')}">
@@ -57,7 +57,7 @@
                                         <label for="prenom">Prénom</label>
                                         <div class="inner-addon left-addon" :class="{ 'control': true }">
                                             <i class="fa fa-user"></i>
-                                            <input type="text" v-validate="'required|prenom'" name="prenom" id="prenom" tabindex="2" class="form-control" placeholder="Eric" v-model="collaborator.prenom">
+                                            <input type="text" v-validate="'required|prenom'" name="prenom" id="prenom" tabindex="2" class="form-control" placeholder="Eric" v-model="collaborator.firstName">
                                             <span v-show="errors.has('prenom')" class="color-red ">{{ errors.first('prenom') }}</span>
                                         </div>
                                     </div>
@@ -94,9 +94,7 @@
                                     <div class="form-group">
                                         <div class="row">
                                             <div class="col-md-6 col-sm-6 col-6 col-lg-6 col-xl-6 offset-3">
-                                                <button type="submit" name="register-submit" id="register-submit" tabindex="4" class="form-control btn btn-primary" @click="verifyForm">S'inscrire</button>
-                                                <!--<input type="submit" name="register-submit" id="register-submit" tabindex="4" class="form-control btn btn-primary"
-                                                       value="S'inscrire">-->
+                                                <button type="submit" name="register-submit" id="register-submit" tabindex="4" class="form-control btn btn-primary" >S'inscrire</button>
                                             </div>
                                         </div>
                                     </div>

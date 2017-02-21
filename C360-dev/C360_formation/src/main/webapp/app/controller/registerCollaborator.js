@@ -18,8 +18,6 @@ new Vue({
         isNewPersonalIdNumber:true,
         isNewEmail:true,
         border: 'color-red',
-        personnalIdNumber: '',
-        validation_personnalIdNumber: true,
         color_inscription: 'color-blue',
         color_connexion: 'color-blue'
     },
@@ -44,7 +42,7 @@ new Vue({
                         this.isNewEmail = true;
                         this.isNewPersonalIdNumber = true;
 
-                        resetForm(); //Reset the Form
+                        this.resetForm(); //Reset the Form
                         window.location.replace('pageblanche.html');
                         //$location.url('/Authentication'); //???????
                     },
@@ -66,8 +64,11 @@ new Vue({
         verifyForm() {
             this.isNewPersonalIdNumber = true;
             this.isNewEmail = true;
+            //this.isNewPersonalIdNumber = false;
+            //this.isNewEmail = false;
+            //this.collaboratorToRegister.email = this.collaborator.email;
             this.collaboratorToRegister = JSON.parse(JSON.stringify(this.collaborator));
-            //saveAction();
+            this.saveAction();
         },
         changeColorConnexion(){
             if(this.color_connexion == 'color-blue' && this.color_inscription == 'color-blue'){
