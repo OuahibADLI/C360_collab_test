@@ -1,0 +1,51 @@
+<div class="row">
+    <div class="col-md-4">
+    </div>
+    <div class="col-md-4">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title">Demande Formation</h3>
+            </div>
+            <div class="panel-body">
+                <form name="formationForm" ng-submit="DmF.verifyForm()" novalidate>
+                    <div class="form-group">
+                        <label>Selectionner une formation</label>
+                        <select class="selectpicker form-control" ng-model="DmF.requestedTraining"
+                                ng-options="training.trainingTitle for training in DmF.trainings"
+                                ng-change="DmF.loadTrainingSessions()">
+                            <option value="" disabled selected style="display: none;">--Sélectionner une formation--
+                            </option>
+                        </select>
+                        <ul>
+                            <li ng-repeat="s in DmF.listTrainingSession">
+                                <input type="checkbox" ng-model="s.isChecked" ng-disabled="DmF.isDisabled(s)">
+                                {{s.beginning | date:"dd LLLL yyyy"}} - {{s.ending | date:"dd LLLL yyyy"}} -
+                                {{s.location}}
+                            </li>
+                        </ul>
+                        <div ng-show="DmF.isListEmpty" class="info-text">Aucune session n'est prévue, vous pouvez
+                            néanmoins envoyer une demande
+                        </div>
+                        <div ng-show="DmF.noneSessionSelected" class="warning-text">Vous n'avez sélectionné aucune</div>
+                        <div ng-show="DmF.noneSessionSelected" class="warning-text">Vous n'avez sélectionné aucune
+                            session
+                        </div>
+                        <div ng-show="DmF.hasToChooseOneTraining" class="warning-text">Veuillez sélectionner une
+                            session
+                        </div>
+
+                        <div><button type="submit" class="center-block btn btn-primary">Envoyer demande</button></div>
+
+
+                    </div>
+                </form>
+                <div id="Trainnig request were successfully sent">
+                    <button class="center-block small alert alert-success" disabled="disabled" role="alert"
+                            ng-show="DmF.isTrainingsRequestSent">
+                        <strong>Vos modifications ont bien été enregistrées</strong>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

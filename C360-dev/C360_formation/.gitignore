@@ -1,0 +1,10 @@
+.log
+.idea/
+.settings/
+bin/
+coverage/
+node_modules/
+target/
+.classpath
+.project
+*.iml

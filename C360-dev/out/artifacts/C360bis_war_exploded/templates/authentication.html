@@ -1,0 +1,40 @@
+<div class="row">
+    <div class="col-md-4"></div>
+    <div class="col-md-4">
+        <div class="panel panel-default">
+
+            <div class="panel-heading">
+                <h3 class="panel-title">Connexion {{CX.currentUser}}</h3>
+            </div>
+
+            <div class="panel-body">
+                <form name="CX.userForm" novalidate ng-submit="CX.submitLogin(CX.userForm)">
+                    <!-- EMAIL -->
+                    <div class="form-group" ng-class="{ 'has-error' : !CX.isNotEmptyEmailField }">
+                        <input type="email" name="email" class="form-control" ng-model="CX.user.email"
+                               required placeholder="Email" ng-focus="CX.isNotEmptyEmailField=true">
+                    </div>
+                    <!-- PASSWORD -->
+                    <div class="form-group" ng-class="{ 'has-error' : !CX.isNotEmptyPasswordField }">
+                        <input type="password" name="password" class="form-control" ng-model="CX.user.password"
+                               required placeholder="Password" ng-focus="CX.isNotEmptyPasswordField=true">
+                    </div>
+                    <div>
+                        <button class="myCssButton center-block alert alert-danger" role="alert"
+                                ng-show="CX.isErrorAuthentification">
+                            Connexion refusée : veuillez entrer une adresse e-mail et un mot de passe valide
+                        </button>
+                    </div>
+                    <div>
+                        <button class="btn btn-primary center-block" type="submit" ng-click="CX.submitLogin(CX.userForm)">Connexion</button>
+                    </div>
+                    <div>
+                        <button class="center-block btn btn-link" ng-click="CX.registerNewCollaborator()">
+                            Pas encore inscrit ? Cliquez ici pour vous enregistrer
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

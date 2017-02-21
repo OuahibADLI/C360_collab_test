@@ -1,0 +1,108 @@
+<div class="row">
+    <div class="col-md-3">
+    </div>
+    <div class="col-md-6">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title">Affectation Session</h3>
+            </div>
+            <div class="panel-body">
+                <div id="selectSession">
+                    <h5><span class="label label-default" style="font-size: 1em">Sessions:</span></h5>
+                    <input ng-blur="AS.checkValidSession()" ng-change="AS.loadNotAffectedAndAffectedCollaboratorsList()"
+                           ng-model="AS.selectedSession" title="Selectionner une session"
+                           class="filter form-control filter-unselected"
+                           list="SessionDataListFilter" placeholder="Sélectionner une session ..."
+                           style="margin-bottom: 5px;" autofocus>
+                    <datalist id="SessionDataListFilter" style="height: 200px; width: 100%;">
+                        <option data-ng-repeat="session in AS.trainingSessionList"
+                                value="{{AS.displayTrainingSession(session)}}"></option>
+                    </datalist>
+                </div>
+                <hr>
+                <div class="form-group" id="wrapper" ng-if="AS.sessionSelected">
+                    <div id="dual-list-box-employees" class="form-group row">
+                        <div class="col-md-5">
+                            <div class="row">
+                                <h5 class="col-lg-6"><span class="label label-default" id="gauche"
+                                                           style="font-size: 1em">Liste des utilisateurs</span></h5>
+                                <il class="col-lg-6" style="margin-top: 5px">
+                                    <input type="checkbox" ng-model="AS.showRequests"
+                                           ng-change="AS.showRequestChanged()">
+                                    Afficher les demandes
+                                </il>
+                            </div>
+                            <div class="collaborator-box">
+                                <div class="searchBox col-md-2">
+                                    <div class="right-inner-addon">
+                                        <i class="glyphicon glyphicon-search"></i>
+                                        <input ng-model="searchCollaboratorField" id="search"
+                                               class="search-widget filter form-control filter-unselected"
+                                               type="text" placeholder="Écrire le nom ou prénom du collaborateur ..."
+                                               autofocus/>
+                                    </div>
+                                </div>
+                                <ul>
+                                    <li ng-repeat="myCollaborator in filterResultList = (AS.availableCollaboratorList |
+                                     searchByString: searchCollaboratorField:'firstName':'lastName' | orderBy:'firstName')"
+                                        ng-show="searchCollaboratorField.length > 0 ||AS.showRequests ">
+                                        <span ng-bind="myCollaborator.firstName+' '+myCollaborator.lastName"></span>
+                                        <button class="glyphicon glyphicon-chevron-right btn btn-xs btn-default btn-success pull-right"
+                                                ng-click="AS.moveItem(myCollaborator, AS.availableCollaboratorList , AS.selectedCollaboratorList)"></button>
+                                    </li>
+                                </ul>
+                                <div alert class="center-block row text-center alert alert-danger small"
+                                     ng-show="(filterResultList.length == 0)&&(searchCollaboratorField.length > 0)">
+                                    <strong>Aucun résultat trouvé</strong>
+                                </div>
+                                <div class="center-block row text-center small"
+                                     ng-hide="searchCollaboratorField.length > 0 ||AS.showRequests">
+                                    <strong>Rechercher un collaborateur</strong>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-2 center-block" style="margin-top: 80px">
+                            <span class="glyphicon glyphicon-chevron-right col-md-8 col-md-offset-2"></span>
+                        </div>
+
+                        <div class="col-md-5">
+                            <h5><span class="label label-default" style="font-size: 1em">Collaborateurs ajoutés: {{AS.selectedCollaboratorList.length}} collaborateurs</span>
+                            </h5>
+                            <div class="collaborator-box">
+                                <ul>
+                                    <li ng-repeat="myCollaborator in AS.selectedCollaboratorList">
+                                        <button class="myPullLeftButton glyphicon glyphicon-chevron-left btn btn-xs btn-default pull-left btn-info"
+                                                ng-click="AS.moveItem(myCollaborator, AS.selectedCollaboratorList, AS.availableCollaboratorList)"></button>
+                                        <span ng-bind="myCollaborator.firstName+' '+myCollaborator.lastName"></span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <button class="center-block btn btn-primary" ng-click="AS.verifyForm()">Enregistrer</button>
+                </div>
+                <br>
+                <div id="Actions were successfully saved">
+                    <button class="center-block small alert alert-success" disabled="disabled" role="alert"
+                            ng-show="AS.isCollabaratorListUpdated">
+                        <strong>Vos modifications ont bien été enregistrées</strong>
+                    </button>
+                </div>
+                <div id="No session was selected">
+                    <button class="center-block small alert alert-danger" disabled="disabled" role="alert"
+                            ng-show="AS.boolErrNoSessionSelected === true">
+                        <strong>Erreur: </strong> Aucune session n'a été selectionnée
+                    </button>
+                </div>
+                <div id="Not a valid Session">
+                    <button class="center-block small alert alert-danger" disabled="disabled" role="alert"
+                            ng-show="AS.isValidSession === false">
+                        <strong>Erreur: </strong> Veuillez sélectionner une session valide
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

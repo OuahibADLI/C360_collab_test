@@ -1,0 +1,115 @@
+<div class="row">
+    <div class="col-md-4"></div>
+    <div class="col-md-4">
+        <div class="panel panel-default">
+
+            <div class="panel-heading">
+                <h3 class="panel-title">Déclaration Session:</h3>
+            </div>
+
+            <div class="MainContainer">
+                <div class="panel-body">
+                    <form class="form-horizontal" name="sessionForm" ng-submit="DS.verifyForm(sessionForm.$invalid)"
+                          novalidate>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <label>{{DS.training.trainingTitle}}</label>
+                            </div>
+                            <div class="col-md-12">
+                                <h5><span class="label label-default">Planification de la session: </span></h5>
+                                <p>Cette formation dure {{DS.training.numberHalfDays}} demi-journées</p>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-sm-6" id="Date-Debut">
+                                <h5><span class="label label-default">Date de début:</span></h5>
+                                <p class="input-group">
+                                    <input type="text" name="date1"
+                                           ng-pattern='DS.regex.beginning'
+                                           class="form-control" uib-datepicker-popup="dd/MM/yyyy"
+                                           ui-date="{ dateFormat: 'dd/MM/yyyy' }" ng-model="DS.d1.dt" ng-trim="true"
+                                           ng-click="DS.d1.open1()" is-open="DS.d1.popup1.opened"
+                                           datepicker-options="DS.d1.dateOptions" ng-required="true"
+                                           close-text="Close"
+                                           alt-input-formats="DS.d1.altInputFormats"
+                                           ng-change="DS.checkDateValide(DS.d1)"/>
+                      <span class="input-group-addon calenderSpan" ng-click="DS.d1.open1()">
+                          <span class="glyphicon glyphicon-calendar"></span>
+                      </span>
+                                </p>
+                            </div>
+                            <div class="col-sm-6">
+                                <h5><span class="label label-default">Heure de début: </span></h5>
+                                <select class="selectpicker form-control" ng-model="DS.beginningHour"
+                                        ng-options='horaire as horaire for horaire in DS.timeSlotsTraining'></select>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-sm-6" id="Date-Fin">
+                                <h5><span class="label label-default">Date de fin:</span></h5>
+                                <p class="input-group">
+                                    <input type="text" name="date2"
+                                           ng-pattern='DS.regex.ending'
+                                           class="form-control" uib-datepicker-popup="dd/MM/yyyy"
+                                           ui-date="{ dateFormat: 'dd/MM/yyyy' }" ng-model="DS.d2.dt" ng-trim="true"
+                                           ng-click="DS.d2.open1()" is-open="DS.d2.popup1.opened"
+                                           datepicker-options="DS.d2.dateOptions" ng-required="true"
+                                           close-text="Close"
+                                           alt-input-formats="DS.d2.altInputFormats"
+                                           ng-change="DS.checkDateValide(DS.d2)" disabled/>
+                                    <span class="input-group-addon" disabled>
+                                        <span class="glyphicon glyphicon-calendar"></span>
+                                    </span>
+                                </p>
+                            </div>
+
+                            <div class="col-sm-6">
+                                <h5><span class="label label-default">Heure de fin: </span></h5>
+                                <select class="selectpicker form-control" ng-model="DS.endHour"
+                                        ng-options='horaire as horaire for horaire in DS.timeSlotsTraining'></select>
+                            </div>
+                        </div>
+
+                        <!-- Lieu de la session -->
+                        <div class="row">
+                            <div class="col-md-12">
+                                <h5><span class="label label-default">Lieu</span></h5>
+                                <select class="selectpicker form-control"
+                                        ng-options="trainingLocation.name for trainingLocation in DS.meetingRoomList"
+                                        ng-model="DS.trainingLocation">
+                                </select>
+                            </div>
+                        </div>
+                        <div class="alertMessageSpace">
+                            <button class="center-block small alert alert-danger" disabled="disabled" role="alert"
+                                    ng-show="DS.isSessionAlreadyPlanned">
+                                Il existe déjà une session pour cette formation dans ces tranches horaires
+                            </button>
+                            <button class="center-block small alert alert-danger" disabled="disabled" role="alert"
+                                    ng-show="DS.isFalseTimeSlot">
+                                Veuillez choisir une date de fin superieure à la date de début
+                            </button>
+                            <button class="center-block small alert alert-danger" disabled="disabled" role="alert"
+                                    ng-show="DS.isFalseForm">
+                                Veuillez remplir tous les champs
+                            </button>
+                            <button class="center-block small alert alert-danger" disabled="disabled" role="alert"
+                                    ng-show="!DS.isWorkingDay && !DS.isFalseForm">
+                                <strong>Attention:</strong> Le jour selectionné est un jour non ouvrable
+                            </button>
+                            <button class="center-block small alert alert-danger" disabled="disabled" role="alert"
+                                    ng-show="DS.isFalseDate && !DS.isFalseForm">
+                                Le format de la date n'est pas correct : (JJ/MM/AAAA)
+                            </button>
+                        </div>
+                        <button type="submit" class="center-block btn btn-primary"
+                                ng-blur="DS.isSessionAlreadyPlanned = false"> Enregistrer
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

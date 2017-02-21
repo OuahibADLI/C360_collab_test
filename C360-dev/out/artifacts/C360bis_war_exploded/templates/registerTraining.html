@@ -1,0 +1,103 @@
+<div class="row">
+    <div class="col-md-1">
+    </div>
+
+    <div class="col-md-12">
+        <div class="panel panel-default">
+
+            <div class="panel-heading">
+                <h3 class="panel-title">Liste des formations</h3>
+            </div>
+            <div class="panel-body">
+                <form name="formationForm" ng-submit="DF.verifyForm(formationForm)" novalidate>
+
+                    <!-- Titre de la Training -->
+                    <div class="row">
+                        <div class="col-sm-3"
+                             ng-class="{ 'has-error' : DF.isErrorInputMessageDisplayed(formationForm.trainingTitle, focus.trainingTitle) }">
+                            <input type="text" name="trainingTitle" class="form-control"
+                                   ng-model="DF.training.trainingTitle"
+                                   required ng-pattern="DF.regex.trainingTitle"
+                                   ng-focus="focus.trainingTitle=true" ng-blur="focus.trainingTitle=false"
+                                   ng-trim="true" placeholder="Nom de la formation">
+                            <p ng-show="DF.isErrorInputMessageDisplayed(formationForm.trainingTitle, focus.trainingTitle)"
+                               class="help-block">Veuillez entrer un titre de formation valide</p>
+                        </div>
+
+                        <div class="col-sm-3">
+                            <p class="input-group">
+                                <select name="topic" required class="defaultSelectedValue selectpicker form-control"
+                                        ng-options="topic.name for topic in (DF.topicList | orderBy : 'name')"
+                                        ng-model="DF.training.topicDescription">
+                                    <option value="" disabled selected>Thèmes...</option>
+                                </select>
+                                <span class="input-group-addon myPlusButton" ng-dialog="firstDialogId" ng-dialog-controller="controllerAddTopic"
+                                      ng-dialog-data="{{jsonData}}" ng-dialog-class="ngdialog-theme-default" ng-dialog-show-close="false">
+                                    <span class="glyphicon glyphicon-plus"></span>
+                                </span>
+                            </p>
+                        </div>
+
+                        <!-- Nombre de 1/2 journée -->
+                        <div class="col-sm-3"
+                             ng-class="{ 'has-error' : DF.isErrorInputMessageDisplayed(formationForm.numberHalfDays, focus.numberHalfDays) }">
+                            <input type="number" name="numberHalfDays" class="form-control no-spinner"
+                                   ng-model="DF.training.numberHalfDays"
+                                   required ng-pattern="DF.regex.numberHalfDays" min="1" max="200"
+                                   ng-focus="focus.numberHalfDays=true" ng-blur="focus.numberHalfDays=false"
+                                   ng-trim="true" placeholder="Nombre de 1/2 journée">
+                            <p ng-show="DF.isErrorInputMessageDisplayed(formationForm.numberHalfDays, focus.numberHalfDays)"
+                               class="help-block">Veuillez entrer un nombre de demi-journée valide (Entre 1 et 200)</p>
+                        </div>
+                        <div class="col-sm-2">
+                            <button type="submit" class="center-block btn btn-primary">Ajouter</button>
+                        </div>
+                    </div>
+                </form>
+                <p><span class="glyphicon glyphicon-info-sign glyphiconInfoSetMarge"></span> Cliquer sur une formation
+                    pour gérer ses sessions</p>
+                <br>
+                <button class="center-block alert alert-danger" role="alert" disabled="disabled"
+                        ng-show="!DF.isNewTrainingTitle">
+                    Une formation avec le même nom existe déjà
+                </button>
+                <button class="center-block alert alert-danger" disabled="disabled" role="alert"
+                        ng-show="DF.isThereAnEmptyField">
+                    Veuillez remplir tous les champs pour créer une formation
+                </button>
+                <button class="center-block alert alert-danger" disabled="disabled" role="alert"
+                        ng-show="DF.isFalseForm">
+                    Veuillez remplir corretement tous les champs
+                </button>
+                <button class="center-block small alert alert-success" disabled="disabled" role="alert"
+                        ng-show="DF.isTrainingSaved">
+                    <strong>La formation {{DF.trainingAdded.trainingTitle}} a été créée avec succès.</strong>
+                </button>
+            </div>
+            <div class="myBox-set well"
+                 ng-repeat="distinctedTopic in (DF.returnTrainingListToFilter() | filter:DF.filterTopic) | orderBy : 'topicDescription.name'">
+                <p class="myBox-set-title well well-sm">{{distinctedTopic.topicDescription.name}}</p>
+                <figure ng-click="DF.manageSession(training)"
+                        ng-repeat="training in (DF.trainingList | filter:{$:distinctedTopic.topicDescription.name}) | orderBy : 'trainingTitle'"
+                        class="myBox well"><p class="myBoxText">{{training.trainingTitle}}</p></figure>
+            </div>
+
+            <script type="text/ng-template" id="firstDialogId">
+                <div class="row">
+                    <div class="col-sm-8 ngdialog-message">
+                        <input type="text" name="topicTitle" class="form-control"
+                               ng-model="topic.name" ng-focus="initializeAlertMessage()"
+                               placeholder="Nom du nouveau thème...">
+                    </div>
+                    <div class="ngdialog-buttons">
+                        <button type="submit" class="ngdialog-button ngdialog-button-primary" ng-click="addTopic(topic)">Ajouter</button>
+                    </div>
+                </div>
+                <button class="center-block alert alert-danger" disabled="disabled" role="alert" ng-show="!isNewTopic">Ce thème a déjà été ajouté</button>
+                <button class="center-block alert alert-danger" disabled="disabled" role="alert" ng-show="isErroneousTopic">Veuillez entrer un nom de thème valide</button>
+            </script>
+
+        </div>
+    </div>
+</div>
+</div>
