@@ -15,32 +15,31 @@
 <div class="container" id="root">
 
     <div class="row">
-        <div class="col-lg-8 col-sm-8 col-8 col-lg-8 col-xl-8 offset-2 ">
-
+            <div class="col-xs-12 col-xm-12 col-md-8 cold-lg-8 col-xl-8 offset-xl-2 offset-lg-2 offset-md-2">
             <div class="card">
                 <br>
-                <div>
 
                     <div class="row">
-                        <div class="col-md-4 col-sm-4 col-4 col-lg-4 col-xl-4 offset-2 text-center inscriptionLine">
+                        <div class="col-xs-12 col-xm-12 col-md-12 col-lg-4 col-xl-4 offset-lg-2 offset-xl-2 text-center inscriptionLine  ">
+
                             <a href="#" :class="color_inscription" id="register-form-link"
                                @click="changeColorConnexion">INSCRIPTION</a>
                         </div>
 
-                        <div class="col-md-4 col-sm-4 col-4 col-lg-4 col-xl-4 text-center connexionLine">
+                        <div class="col-xs-12 col-xm-12 col-md-12 col-lg-4 col-xl-4 text-center connexionLine ">
                             <a href="#" :class="color_connexion" id="login-form-link" @click="changeColorInscription">CONNEXION</a>
                         </div>
                     </div>
 
 
-                </div> <!-- Fin panel heading -->
+
 
 
                 <div class="card-block">
                     <div class="row">
-                        <div class="col-md-6 col-sm-6 col-6 col-lg-6 col-xl-6 offset-3">
+                        <div class="col-xs-12 col-xm-12 col-md-6 cold-lg-6 col-xl-6 offset-xl-3 offset-lg-3 offset-md-3">
 
-                            <form id="register-form" action="#" method="post" role="form" style="display: block;">
+                            <form id="register-form" action="index.html" method="post" role="form" style="display: block;">
                                 <!-- MATRICULE -->
                                 <div class="form-group">
                                     <label>Code de login</label>
@@ -89,16 +88,19 @@
                                     </div>
                                 </div>
                                 <!-- MOT DE PASSE -->
-                                <div class="form-group">
+                                <div class="form-group" >
                                     <label>Mot de passe</label>
                                     <div class="password">
                                         <i class="fa fa-lock"></i>
-                                        <span class="fa fa-eye" >
+                                        <span @click="showPass = !showPass" v-show="!showPass && password" class="fa fa-eye" > </span>
+                                            <span @click="showPass = false" v-show="showPass && password" class="fa fa-eye-slash" >
 
 
                                         </span>
-                                        <input type="password" name="confirm-password" id="password" tabindex="2"
-                                               class="form-control" placeholder="••••••">
+                                        <input v-model="password" v-show="!showPass" type="password" name="password"  tabindex="2"
+                                               class="form-control " placeholder="••••••">
+                                        <input v-model="password" v-show="showPass" type="text" name="password"  tabindex="2"
+                                               class="form-control" >
 
                                     </div>
                                 </div>
@@ -107,12 +109,14 @@
                                     <label>Confirmation mot de passe</label>
                                     <div class="password">
                                        <i class="fa fa-lock"></i>
-                                        <span class="fa fa-eye" >
-
+                                        <span @click="showPassConf = !showPassConf" v-show="!showPassConf && confpassword" class="fa fa-eye" > </span>
+                                        <span @click="showPassConf = false" v-show="showPassConf && confpassword" class="fa fa-eye-slash" >
 
                                         </span>
-                                        <input type="password" name="confirm-password" id="confirm-password"
+                                        <input v-model="confpassword" v-show="!showPassConf" type="password" name="confirm-password" id="confirm-password"
                                                tabindex="2" class="form-control" placeholder="••••••">
+                                        <input v-model="confpassword" v-show="showPassConf" type="text" name="confirm-password"  tabindex="2"
+                                               class="form-control" >
                                     </div>
 
 
@@ -121,9 +125,9 @@
 
                                 <div class="form-group">
                                     <div class="row">
-                                        <div class="col-md-6 col-sm-6 col-6 col-lg-6 col-xl-6 offset-3">
+                                        <div class="col-xs-12 col-xm-12 col-md-6 cold-lg-6 col-xl-6 offset-xl-3 offset-lg-3 offset-md-3">
                                             <input type="submit" name="register-submit" id="register-submit"
-                                                   tabindex="4" class="form-control btn btn-primary" value="S'inscrire">
+                                                   tabindex="4" class="form-control btn btn-primary responsive-width" value="S'inscrire">
                                         </div>
                                     </div>
                                 </div>
@@ -143,7 +147,12 @@
             personnalIdNumber: '',
             validation_personnalIdNumber: true,
             color_inscription: 'color-blue',
-            color_connexion: 'color-blue'
+            color_connexion: 'color-blue',
+            showPass: false,
+            // init
+            password: '',
+            showPassConf: false,
+            confpassword: ''
         },
         methods: {
             validerMatricule(){
@@ -172,6 +181,7 @@
         }
 
     });
+
 </script>
 </body>
 </html>
