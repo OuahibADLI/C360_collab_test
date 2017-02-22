@@ -3,6 +3,7 @@
  */
 Vue.use(VueResource);
 Vue.use(VeeValidate);
+Vue.use(VueRouter);
 new Vue({
     el: '#app',
     data: {
@@ -29,6 +30,7 @@ new Vue({
             this.collaborator.email = '';
             this.collaborator.password = '';
             this.collaborator.confirmPassword = '';
+            this.collaboratorToRegister = {};
         },
         saveAction() {
             this.collaboratorToRegister.lastName = this.collaborator.lastName.replace(" ", "");  //delete useless spaces between words
@@ -41,18 +43,17 @@ new Vue({
                     function (response) {
                         this.isNewEmail = true;
                         this.isNewPersonalIdNumber = true;
-
                         this.resetForm(); //Reset the Form
                         window.location.replace('pageblanche.html');
-                        //$location.url('/Authentication'); //???????
+                        //this.$router.replace('pageblanche.html');
                     },
                     function (response) {
                         console.log("Error: ",response);
-                        if (response.json().message === "personnalIdNumber") { //message: defini dans la partie java exception ??
+                        if (response.data.message == "personnalIdNumber") {
                             this.isNewPersonalIdNumber = false;
                             this.isNewEmail = true;
                         }
-                        else if(response.json().message === "email"){
+                        else if(response.data.message == "email"){
                             this.isNewEmail = false;
                             this.isNewPersonalIdNumber = true;
                         }else{
@@ -64,9 +65,6 @@ new Vue({
         verifyForm() {
             this.isNewPersonalIdNumber = true;
             this.isNewEmail = true;
-            //this.isNewPersonalIdNumber = false;
-            //this.isNewEmail = false;
-            //this.collaboratorToRegister.email = this.collaborator.email;
             this.collaboratorToRegister = JSON.parse(JSON.stringify(this.collaborator));
             this.saveAction();
         },
